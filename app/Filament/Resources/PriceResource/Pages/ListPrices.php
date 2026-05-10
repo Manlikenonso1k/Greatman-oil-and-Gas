@@ -1,0 +1,26 @@
+<?php
+/**
+ * FILAMENT RESOURCE PAGE
+ * ListPrices Page
+ * 
+ * File Location: app/Filament/Resources/PriceResource/Pages/ListPrices.php
+ */
+
+namespace App\Filament\Resources\PriceResource\Pages;
+
+use App\Filament\Resources\PriceResource;
+use Filament\Actions;
+use Filament\Resources\Pages\ListRecords;
+
+class ListPrices extends ListRecords
+{
+    protected static string $resource = PriceResource::class;
+
+    protected function getHeaderActions(): array
+    {
+        return [
+            Actions\CreateAction::make()
+                ->label('Add New Price'),
+        ];
+    }
+}

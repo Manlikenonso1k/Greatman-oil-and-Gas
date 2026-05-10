@@ -1,0 +1,34 @@
+Here is the precise prompt to give your GPT-5 mini agent. It is designed to ensure the agent understands the technical stack (Laravel/Blade/Alpine) and the specific "Apple-style" luxury animation you want.
+
+The Agent Prompt: Laravel Blade Hero Slider Implementation
+Role: Act as a Senior Full-Stack Developer specializing in Laravel, Tailwind CSS, and Alpine.js.
+
+Objective: Refactor my existing static Laravel Blade hero section into a high-end, auto-playing 5-image slider.
+
+Technical Constraints & Requirements:
+
+Logic: Use Alpine.js for the slider state and timing. Do not use heavy external libraries.
+
+Assets: Use 5 images located at {{ asset('images/slide1.jpg') }} through {{ asset('images/slide5.jpg') }}.
+
+Animation Style (The "Apple" Look):
+
+Implement a smooth cross-fade transition.
+
+Add a very subtle Ken Burns effect (the incoming image should slowly scale down from 1.05 to 1.0 over the duration of the transition).
+
+Set the interval to 5 or 6 seconds per slide.
+
+UI Preservation:
+
+Keep the Status Badge ("All Systems Live") and the Glassmorphism Paragraph (bg-white/20 backdrop-blur-lg).
+
+Ensure the text content stays fixed and readable while the background images transition behind the gradient overlay.
+
+Refinement:
+
+Ensure proper z-index management so the text is always on top of the images and gradient.
+
+Add minimalist slide indicators (thin bars) at the bottom to show progress.
+
+Update the "Find Nearest Station" and Map icons to link to: [https://maps.app.goo.gl/PCdCpqD6PbYgangX8](https://maps.app.goo.gl/PCdCpqD6PbYgangX8).

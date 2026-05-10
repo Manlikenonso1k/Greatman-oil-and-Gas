@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GreatMan Oil &amp; Gas | Live Status Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#4a382d",
+                        "primary-container": "#343d46",
+                        "on-tertiary-fixed": "#27180f",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#dae3ef",
+                        "surface": "#fcf9f9",
+                        "primary": "#1e2730",
+                        "surface-container-low": "#f6f3f3",
+                        "surface-variant": "#e4e2e2",
+                        "on-surface": "#1b1b1c",
+                        "on-secondary-container": "#516e00",
+                        "inverse-on-surface": "#f3f0f0",
+                        "outline": "#74777b",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#565f69",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#44474b",
+                        "on-tertiary-container": "#bba193",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#fcf9f9",
+                        "tertiary-fixed-dim": "#dcc1b2",
+                        "tertiary": "#332319",
+                        "secondary-container": "#c6f265",
+                        "surface-dim": "#dcd9da",
+                        "on-primary": "#ffffff",
+                        "secondary": "#4c6700",
+                        "surface-container-high": "#eae7e8",
+                        "surface-container-highest": "#e4e2e2",
+                        "on-primary-fixed": "#141c25",
+                        "on-primary-fixed-variant": "#3f4851",
+                        "secondary-fixed": "#c6f265",
+                        "tertiary-fixed": "#f9ddcd",
+                        "surface-container": "#f0edee",
+                        "inverse-primary": "#bec7d3",
+                        "on-tertiary-fixed-variant": "#564337",
+                        "surface-bright": "#fcf9f9",
+                        "primary-fixed-dim": "#bec7d3",
+                        "inverse-surface": "#303031",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#c4c6cb",
+                        "on-secondary-fixed-variant": "#384e00",
+                        "secondary-fixed-dim": "#abd54c",
+                        "on-primary-container": "#9ea7b2",
+                        "on-secondary-fixed": "#141f00",
+                        "on-background": "#1b1b1c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "32px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "sm": "8px",
+                        "unit": "8px",
+                        "xxl": "48px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scroll-left-animation {
+            animation: scroll-left 20s linear infinite;
+        }
+        @keyframes scroll-left {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .natural-shadow {
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
+        }
+        .natural-shadow:hover {
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-lg h-16 max-w-container-max mx-auto bg-surface shadow-md">
+<div class="flex items-center gap-sm">
+<span class="font-headline-lg text-headline-lg font-bold text-secondary">GreatMan Oil &amp; Gas</span>
+</div>
+<nav class="hidden md:flex items-center gap-xl">
+<a class="text-secondary font-bold border-b-2 border-secondary font-body-md text-body-md" href="#">Live Status</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-body-md" href="#">LPG Trust</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-body-md" href="#">Locator</a>
+</nav>
+<div class="flex items-center gap-md">
+<button class="material-symbols-outlined p-sm hover:bg-surface-container-high rounded-full transition-colors text-primary" data-icon="local_gas_station">local_gas_station</button>
+<button class="material-symbols-outlined p-sm hover:bg-surface-container-high rounded-full transition-colors text-primary" data-icon="account_circle">account_circle</button>
+<button class="bg-primary text-on-primary px-lg py-sm rounded-lg font-bold hover:scale-95 active:scale-90 transition-transform">Order Fuel</button>
+</div>
+</header>
+<!-- LivePriceTicker -->
+<div class="mt-16 w-full py-xs px-lg flex items-center gap-md overflow-hidden whitespace-nowrap bg-secondary-container border-b border-outline-variant">
+<div class="flex items-center gap-xs shrink-0">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="payments">payments</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-secondary-container font-black">Current Rates</span>
+</div>
+<div class="scroll-left-animation flex gap-xl text-on-secondary-container font-label-sm text-label-sm uppercase tracking-wider">
+<span>Premium Motor Spirit: ₦617.00/L</span>
+<span>Automotive Gas Oil: ₦1,200.00/L</span>
+<span>LPG (12.5kg): ₦10,500.00</span>
+<span>Dual Purpose Kerosene: ₦850.00/L</span>
+<span>Premium Motor Spirit: ₦617.00/L</span>
+<span>Automotive Gas Oil: ₦1,200.00/L</span>
+</div>
+</div>
+<main class="max-w-container-max mx-auto px-lg py-xxl flex gap-xl">
+<!-- SideNavBar -->
+<aside class="hidden lg:flex flex-col py-lg h-[calc(100vh-120px)] w-64 shrink-0 bg-surface-container-low border-r border-outline-variant rounded-xl sticky top-28">
+<div class="px-lg mb-xl">
+<h2 class="font-headline-lg text-secondary">GreatMan Oil &amp; Gas</h2>
+<p class="text-on-surface-variant text-label-sm italic">Think Energy, Think Greatman</p>
+</div>
+<nav class="flex-1 space-y-sm">
+<a class="flex items-center gap-md p-md mx-2 bg-secondary text-on-secondary rounded-lg font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-md p-md mx-2 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span>Station Map</span>
+</a>
+<a class="flex items-center gap-md p-md mx-2 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+<span>Price Trends</span>
+</a>
+<a class="flex items-center gap-md p-md mx-2 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span>Order History</span>
+</a>
+<a class="flex items-center gap-md p-md mx-2 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+<span>Support</span>
+</a>
+</nav>
+<div class="px-md mt-auto">
+<button class="w-full bg-primary text-on-primary py-md rounded-lg font-bold hover:opacity-90 transition-all">Find Nearest Station</button>
+</div>
+</aside>
+<!-- Main Content -->
+<div class="flex-1">
+<div class="mb-xl flex justify-between items-end">
+<div>
+<h1 class="font-display-lg text-display-lg text-primary">Live Lane Status</h1>
+<p class="text-on-surface-variant mt-xs">Real-time monitoring for GreatMan Station #042 - Central Hub</p>
+</div>
+<div class="flex items-center gap-sm bg-surface-container-high px-md py-sm rounded-full">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">LIVE UPDATES ACTIVE</span>
+</div>
+</div>
+<!-- Bento Grid Dashboard -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<!-- Fuel Pump Status Section -->
+<section class="space-y-md">
+<div class="flex items-center gap-md mb-md">
+<div class="p-sm bg-primary-container text-on-primary-container rounded-lg">
+<span class="material-symbols-outlined" data-icon="local_gas_station">local_gas_station</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Fuel Pump Status</h2>
+</div>
+<!-- Lane Card -->
+<div class="bg-white p-lg rounded-xl natural-shadow border-l-4 border-secondary transition-all hover:translate-y-[-2px]">
+<div class="flex justify-between items-start mb-lg">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">LANE 01</span>
+<h3 class="font-headline-lg text-headline-lg text-primary">PMS - Premium</h3>
+</div>
+<div class="bg-secondary/15 text-secondary px-md py-xs rounded-full font-bold text-xs">
+                                OPTIMAL
+                            </div>
+</div>
+<div class="flex items-center gap-xl">
+<div class="relative flex items-center justify-center h-20 w-20">
+<svg class="h-full w-full transform -rotate-90">
+<circle class="text-surface-variant" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-width="6"></circle>
+<circle class="text-secondary" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-dasharray="213.6" stroke-dashoffset="190" stroke-width="6"></circle>
+</svg>
+<span class="absolute font-bold text-primary">3m</span>
+</div>
+<div class="flex-1 space-y-sm">
+<div class="flex justify-between text-label-sm">
+<span class="text-on-surface-variant">Queue Depth</span>
+<span class="font-bold text-primary">2 Vehicles</span>
+</div>
+<div class="w-full bg-surface-variant h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[15%]"></div>
+</div>
+<p class="text-label-sm text-on-surface-variant italic">Next pump available in ~45s</p>
+</div>
+</div>
+</div>
+<!-- Lane Card Busy -->
+<div class="bg-white p-lg rounded-xl natural-shadow border-l-4 border-error transition-all hover:translate-y-[-2px]">
+<div class="flex justify-between items-start mb-lg">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">LANE 02</span>
+<h3 class="font-headline-lg text-headline-lg text-primary">AGO - Diesel</h3>
+</div>
+<div class="bg-error/10 text-error px-md py-xs rounded-full font-bold text-xs">
+                                BUSY
+                            </div>
+</div>
+<div class="flex items-center gap-xl">
+<div class="relative flex items-center justify-center h-20 w-20">
+<svg class="h-full w-full transform -rotate-90">
+<circle class="text-surface-variant" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-width="6"></circle>
+<circle class="text-error" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-dasharray="213.6" stroke-dashoffset="50" stroke-width="6"></circle>
+</svg>
+<span class="absolute font-bold text-primary">18m</span>
+</div>
+<div class="flex-1 space-y-sm">
+<div class="flex justify-between text-label-sm">
+<span class="text-on-surface-variant">Queue Depth</span>
+<span class="font-bold text-primary">12 Vehicles</span>
+</div>
+<div class="w-full bg-surface-variant h-1 rounded-full overflow-hidden">
+<div class="bg-error h-full w-[80%]"></div>
+</div>
+<p class="text-label-sm text-on-surface-variant italic">Heavy transit volume detected</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Gas Refill Status Section -->
+<section class="space-y-md">
+<div class="flex items-center gap-md mb-md">
+<div class="p-sm bg-secondary-container text-on-secondary-container rounded-lg">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Gas Refill Status</h2>
+</div>
+<!-- Gas Station Card -->
+<div class="bg-white p-lg rounded-xl natural-shadow border-l-4 border-secondary transition-all hover:translate-y-[-2px]">
+<div class="flex justify-between items-start mb-lg">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">POINT A</span>
+<h3 class="font-headline-lg text-headline-lg text-primary">Domestic LPG</h3>
+</div>
+<div class="bg-secondary/15 text-secondary px-md py-xs rounded-full font-bold text-xs">
+                                FAST TRACK
+                            </div>
+</div>
+<div class="flex items-center gap-xl">
+<div class="relative flex items-center justify-center h-20 w-20">
+<svg class="h-full w-full transform -rotate-90">
+<circle class="text-surface-variant" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-width="6"></circle>
+<circle class="text-secondary" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-dasharray="213.6" stroke-dashoffset="180" stroke-width="6"></circle>
+</svg>
+<span class="absolute font-bold text-primary">5m</span>
+</div>
+<div class="flex-1 space-y-sm">
+<div class="flex justify-between text-label-sm">
+<span class="text-on-surface-variant">Cylinders in Queue</span>
+<span class="font-bold text-primary">4 Units</span>
+</div>
+<div class="w-full bg-surface-variant h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[25%]"></div>
+</div>
+<p class="text-label-sm text-on-surface-variant italic">3 attendants active</p>
+</div>
+</div>
+</div>
+<!-- Industrial Gas Card -->
+<div class="bg-white p-lg rounded-xl natural-shadow border-l-4 border-primary transition-all hover:translate-y-[-2px]">
+<div class="flex justify-between items-start mb-lg">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">POINT B</span>
+<h3 class="font-headline-lg text-headline-lg text-primary">Industrial Bulk</h3>
+</div>
+<div class="bg-primary/10 text-primary px-md py-xs rounded-full font-bold text-xs">
+                                MODERATE
+                            </div>
+</div>
+<div class="flex items-center gap-xl">
+<div class="relative flex items-center justify-center h-20 w-20">
+<svg class="h-full w-full transform -rotate-90">
+<circle class="text-surface-variant" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-width="6"></circle>
+<circle class="text-primary" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-dasharray="213.6" stroke-dashoffset="120" stroke-width="6"></circle>
+</svg>
+<span class="absolute font-bold text-primary">12m</span>
+</div>
+<div class="flex-1 space-y-sm">
+<div class="flex justify-between text-label-sm">
+<span class="text-on-surface-variant">Active Loads</span>
+<span class="font-bold text-primary">2 Tanks</span>
+</div>
+<div class="w-full bg-surface-variant h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[45%]"></div>
+</div>
+<p class="text-label-sm text-on-surface-variant italic">Pressure stabilization in progress</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Visual Map Placeholder -->
+<div class="mt-xl rounded-xl overflow-hidden natural-shadow relative h-64 bg-surface-variant">
+<img class="w-full h-full object-cover grayscale opacity-50" data-alt="A sophisticated digital map overlay showing a minimalist urban cityscape of Lagos with glowing green and white data points indicating gas station locations. The visual style is clean and tech-forward, with high-end light-mode aesthetics and professional industrial data visualization elements." data-location="Lagos, Nigeria" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5LBezQ2wwMV3X1r64cSSVCn8K4F-33Bv07DNpOKNfkRgHQYnvan7RvX7XfAz3Dk8EJjLK45xz-nx1iSdjNO-UVjlPplavfNlcNU-g0abEIGmmcuC7BtWLyEaxnTkSvCgBr4fbv80W32NO2rRExqK3qNq82wN8EbSgl4Oh-wQE3RZ2pVQtL2GmhnNtRiHLOJ2Qz2v9z52HqsGCJg9OLajOyMYErwYR_Xg_2FLPiHNgNcoDLWYiHzxhDBTEdD0myjTuHnbhEwF8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex items-end p-lg">
+<div class="text-white">
+<h4 class="font-headline-lg font-bold">Station Map Overview</h4>
+<p class="font-label-sm opacity-80 uppercase tracking-widest">Global Hub #042 Connectivity Status: ONLINE</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-xxl px-lg flex flex-col md:flex-row justify-between items-start gap-lg bg-primary text-on-primary">
+<div class="max-w-md">
+<h3 class="font-headline-lg text-secondary mb-md">GreatMan Oil &amp; Gas</h3>
+<p class="text-primary-fixed-dim font-body-md opacity-80">Driving sustainable energy solutions across the continent with precision, integrity, and innovation.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-xl">
+<div class="space-y-sm">
+<h4 class="font-bold text-secondary uppercase tracking-widest text-xs mb-md">Corporate</h4>
+<ul class="space-y-xs font-label-sm">
+<li><a class="text-primary-fixed-dim hover:text-secondary-fixed transition-all hover:underline" href="#">Privacy Policy</a></li>
+<li><a class="text-primary-fixed-dim hover:text-secondary-fixed transition-all hover:underline" href="#">Terms of Service</a></li>
+<li><a class="text-primary-fixed-dim hover:text-secondary-fixed transition-all hover:underline" href="#">Compliance</a></li>
+</ul>
+</div>
+<div class="space-y-sm">
+<h4 class="font-bold text-secondary uppercase tracking-widest text-xs mb-md">Connect</h4>
+<ul class="space-y-xs font-label-sm">
+<li><a class="text-primary-fixed-dim hover:text-secondary-fixed transition-all hover:underline" href="#">Contact Us</a></li>
+<li><a class="text-primary-fixed-dim hover:text-secondary-fixed transition-all hover:underline" href="#">Careers</a></li>
+</ul>
+</div>
+</div>
+<div class="w-full md:w-auto border-t md:border-t-0 border-primary-container pt-xl md:pt-0">
+<p class="font-label-sm text-label-sm text-primary-fixed-dim">© 2024 The GreatMan Oil and Gas. All rights reserved.</p>
+</div>
+</footer>
+</body></html>
