@@ -25,7 +25,7 @@
 <main class="max-w-container-max mx-auto px-lg py-xxl flex gap-xl">
     <aside class="hidden lg:flex flex-col py-lg h-[calc(100vh-120px)] w-64 shrink-0 bg-surface-container-low border-r border-outline-variant rounded-xl sticky top-28">
         <div class="px-lg mb-xl">
-            <h2 class="font-headline-lg text-secondary">GreatMan Oil & Gas</h2>
+            <img src="{{ asset('images/header logo.png') }}" alt="GreatMan Oil & Gas" class="h-16 object-contain mb-md"/>
             <p class="text-on-surface-variant text-label-sm italic">Think Energy, Think Greatman</p>
         </div>
         <nav class="flex-1 space-y-sm">

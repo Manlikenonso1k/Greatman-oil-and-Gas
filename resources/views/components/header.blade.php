@@ -2,7 +2,7 @@
 <header class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-lg h-16 bg-surface shadow-sm">
     <div class="w-full flex justify-between items-center max-w-container-max mx-auto">
         <div class="flex items-center gap-md">
-            <span class="font-headline-lg text-headline-lg font-bold text-secondary">GreatMan Oil &amp; Gas</span>
+            <img src="{{ asset('images/header logo.png') }}" alt="GreatMan Oil & Gas" class="h-12 object-contain"/>
         </div>
         
         <nav class="hidden lg:flex items-center gap-xl">
