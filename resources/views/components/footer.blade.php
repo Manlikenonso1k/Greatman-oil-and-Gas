@@ -22,9 +22,13 @@
         </div>
     </div>
     <div class="w-full md:w-auto pt-xl md:pt-0 border-t md:border-t-0 border-outline-variant/20">
-        <p class="text-primary-fixed-dim font-label-sm">© 2024 The GreatMan Oil and Gas. All rights reserved.</p>
+        <p class="text-primary-fixed-dim font-label-sm">© <span id="year"></span> The GreatMan Oil and Gas. All rights reserved.</p>
     </div>
 </footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 <!-- Floating Action Buttons -->
 <div class="fixed bottom-lg right-lg z-40 flex flex-col gap-md">
