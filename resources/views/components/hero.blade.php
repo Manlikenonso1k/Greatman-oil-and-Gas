@@ -40,7 +40,7 @@
                 <span class="font-label-sm text-[11px] sm:text-sm">ALL SYSTEMS LIVE</span>
             </div>
             <h1 class="font-display-lg text-[38px] leading-[1.05] sm:text-display-lg mb-sm sm:mb-md">Think Energy,<br/>Think Greatman.</h1>
-            <p class="font-body-md text-sm sm:text-body-md text-on-primary-container mb-lg sm:mb-xl max-w-lg bg-white/20 backdrop-blur-lg px-md sm:px-lg py-sm sm:py-md rounded-xl">
+            <p class="font-body-md text-sm sm:text-body-md text-white mb-lg sm:mb-xl max-w-lg bg-white/20 backdrop-blur-lg px-md sm:px-lg py-sm sm:py-md rounded-xl">
                 Experience the gold standard in fueling. Real-time availability, transparent pricing, and world-class service at every GreatMan destination.
             </p>
             <div class="flex flex-wrap gap-sm sm:gap-md">
