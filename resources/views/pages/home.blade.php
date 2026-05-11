@@ -40,7 +40,7 @@
                     <span class="text-[14px] font-bold text-primary">8 mins</span>
                 </div>
             </div>
-            <a href="https://maps.app.goo.gl/PCdCpqD6PbYgangX8" target="_blank" rel="noopener noreferrer" class="w-full mt-lg border border-outline-variant py-sm rounded-lg font-bold hover:bg-surface-container-high transition-colors block text-center">Details &amp; Directions</a>
+            <a href="https://www.google.com/maps/place/Greatman+oil+and+Gas/@5.5358168,5.8120042,17z/data=!3m1!4b1!4m6!3m5!1s0x1041ad1f3d9e3b47:0x340d9fe2c4278f96!8m2!3d5.5358168!4d5.8120042!16s%2Fg%2F11z787fsbl?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="w-full mt-lg border border-outline-variant py-sm rounded-lg font-bold hover:bg-surface-container-high transition-colors block text-center">Details &amp; Directions</a>
         </div>
 
         <div class="bg-surface rounded-xl p-lg shadow-[0px_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.08)] transition-all">
@@ -65,17 +65,17 @@
                     <span class="text-[14px] font-bold text-primary">12 mins</span>
                 </div>
             </div>
-            <a href="https://maps.app.goo.gl/PCdCpqD6PbYgangX8" target="_blank" rel="noopener noreferrer" class="w-full mt-lg border border-outline-variant py-sm rounded-lg font-bold hover:bg-surface-container-high transition-colors block text-center">Details &amp; Directions</a>
+            <a href="https://www.google.com/maps/place/Greatman+oil+and+Gas/@5.5358168,5.8120042,17z/data=!3m1!4b1!4m6!3m5!1s0x1041ad1f3d9e3b47:0x340d9fe2c4278f96!8m2!3d5.5358168!4d5.8120042!16s%2Fg%2F11z787fsbl?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="w-full mt-lg border border-outline-variant py-sm rounded-lg font-bold hover:bg-surface-container-high transition-colors block text-center">Details &amp; Directions</a>
         </div>
 
         <div class="relative rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.04)] group">
-            <img alt="Interactive Map" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 cursor-pointer" onclick="window.open('https://maps.app.goo.gl/PCdCpqD6PbYgangX8', '_blank')" src="{{ asset('images/map-interactive.jpg') }}"/>
+            <img alt="Interactive Map" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 cursor-pointer" onclick="window.open('https://www.google.com/maps/place/Greatman+oil+and+Gas/@5.5358168,5.8120042,17z/data=!3m1!4b1!4m6!3m5!1s0x1041ad1f3d9e3b47:0x340d9fe2c4278f96!8m2!3d5.5358168!4d5.8120042!16s%2Fg%2F11z787fsbl?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D', '_blank')" src="{{ asset('images/map-interactive.jpg') }}"/>
             <div class="absolute inset-0 bg-primary/20 flex items-center justify-center">
                 <div class="bg-surface p-lg rounded-xl text-center shadow-lg">
                     <span class="material-symbols-outlined text-secondary text-4xl">map</span>
                     <p class="font-bold text-primary mt-sm">Interactive Network Map</p>
                     <p class="text-[12px] text-on-surface-variant mb-md">Locate 45+ premium stations</p>
-                    <a href="https://maps.app.goo.gl/PCdCpqD6PbYgangX8" target="_blank" rel="noopener noreferrer" class="bg-primary text-on-primary px-lg py-xs rounded-lg text-sm font-bold inline-block">Open Map</a>
+                    <a href="https://www.google.com/maps/place/Greatman+oil+and+Gas/@5.5358168,5.8120042,17z/data=!3m1!4b1!4m6!3m5!1s0x1041ad1f3d9e3b47:0x340d9fe2c4278f96!8m2!3d5.5358168!4d5.8120042!16s%2Fg%2F11z787fsbl?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="bg-primary text-on-primary px-lg py-xs rounded-lg text-sm font-bold inline-block">Open Map</a>
                 </div>
             </div>
         </div>
