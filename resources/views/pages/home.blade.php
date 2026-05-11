@@ -21,8 +21,8 @@
         <div class="bg-surface rounded-xl p-lg shadow-[0px_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.08)] transition-all">
             <div class="flex justify-between items-start mb-md">
                 <div>
-                    <h4 class="font-bold text-primary">Lekki Phase 1 Flagship</h4>
-                    <p class="text-label-sm text-on-surface-variant">Plot 12, Admiralty Way</p>
+                    <h4 class="font-bold text-primary">Opete Premium Station</h4>
+                    <p class="text-label-sm text-on-surface-variant">Otokutu junction opete road, opposite Day Spring School</p>
                 </div>
                 <span class="bg-secondary/15 text-secondary px-sm py-1 rounded-full text-[12px] font-bold">OPERATIONAL</span>
             </div>
