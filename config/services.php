@@ -36,7 +36,7 @@ return [
     ],
 
     'whatsapp' => [
-        'url' => env('WHATSAPP_URL', 'https://wa.me/2348032628137'),
+        'url' => env('WHATSAPP_URL', 'https://wa.me/2349112118888'),
     ],
 
 ];
