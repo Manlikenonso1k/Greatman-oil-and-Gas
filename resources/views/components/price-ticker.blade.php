@@ -13,7 +13,7 @@
         @empty
             <span class="font-label-sm uppercase tracking-wider text-on-secondary-container/80">Petrol: <span class="font-bold">₦1,350.00/L</span></span>
             <span class="font-label-sm uppercase tracking-wider text-on-secondary-container/80">Diesel: <span class="font-bold">₦2,000.00/L</span></span>
-            <span class="font-label-sm uppercase tracking-wider text-on-secondary-container/80">LPG (12.5kg): <span class="font-bold">₦16,250.00</span></span>
+            <span class="font-label-sm uppercase tracking-wider text-on-secondary-container/80">LPG (12.5kg): <span class="font-bold">₦19,375.00</span></span>
         @endforelse
     </div>
 </div>
