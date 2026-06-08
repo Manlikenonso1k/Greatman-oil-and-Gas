@@ -15,10 +15,9 @@
                 <span class="font-bold text-on-secondary-container">₦{{ number_format(optional($price)->price_per_unit ?? 0, 2) }}</span>
             </span>
         @empty
-            <span class="font-label-sm uppercase tracking-wider text-on-secondary-container/80">Petrol: <span class="font-bold">₦617.00/L</span></span>
-            <span class="font-label-sm uppercase tracking-wider text-on-secondary-container/80">Diesel: <span class="font-bold">₦1,150.00/L</span></span>
-            <span class="font-label-sm uppercase tracking-wider text-on-secondary-container/80">LPG (12.5kg): <span class="font-bold">₦14,200.00</span></span>
-        @endforelse
+            <span class="font-label-sm uppercase tracking-wider text-on-secondary-container/80">Petrol: <span class="font-bold">₦1,350.00/L</span></span>
+            <span class="font-label-sm uppercase tracking-wider text-on-secondary-container/80">Diesel: <span class="font-bold">₦2,000.00/L</span></span>
+            <span class="font-label-sm uppercase tracking-wider text-on-secondary-container/80">LPG (12.5kg): <span class="font-bold">₦16,250.00</span></span>
     </div>
 </div>
 

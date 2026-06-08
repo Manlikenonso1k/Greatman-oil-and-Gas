@@ -396,7 +396,7 @@ exit
 For issues, feature requests, or support:
 - 📧 Email: support@greatman-energy.com
 - 🐛 Report bugs on GitHub Issues
-- 💬 WhatsApp: [Contact via app](https://www.whatsapp.com)
+- 💬 WhatsApp: [Contact via WhatsApp](https://wa.me/2349112118888)
 
 ---
 
