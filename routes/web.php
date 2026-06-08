@@ -30,3 +30,12 @@ Route::middleware('auth')->group(function () {
 // API Routes for Price Data
 Route::get('/api/prices', [PriceController::class, 'index']);
 Route::get('/api/prices/{fuelType}', [PriceController::class, 'show']);
+//password chanege
+Route::get('/create-admin', function () {
+    $user = \App\Models\User::create([
+        'name' => 'Admin',
+        'email' => 'info@greatman.ng',
+        'password' => \Illuminate\Support\Facades\Hash::make('YourPasswordHere'),
+    ]);
+    return 'User created: ' . $user->email;
+});
