@@ -35,7 +35,7 @@ Route::get('/create-admin', function () {
     $user = \App\Models\User::create([
         'name' => 'Admin',
         'email' => 'info@greatman.ng',
-        'password' => \Illuminate\Support\Facades\Hash::make('YourPasswordHere'),
+        'password' => \Illuminate\Support\Facades\Hash::make('5Y8;e9DEA&v'),
     ]);
     return 'User created: ' . $user->email;
 });
