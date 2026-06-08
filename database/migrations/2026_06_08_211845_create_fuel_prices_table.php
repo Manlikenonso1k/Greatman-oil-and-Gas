@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('fuel_prices', function (Blueprint $table) {
             $table->id();
+            $table->string('fuel_type'); // Petrol, Diesel, LPG (12.5kg)
+            $table->decimal('price_per_unit', 10, 2);
             $table->timestamps();
         });
     }
